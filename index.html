@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AskAstro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple-deep:#1a0b2e;
+    --purple-mid:#2d1250;
+    --purple-accent:#7c3aed;
+    --purple-soft:#a78bfa;
+    --white:#ffffff;
+    --white-soft:rgba(255,255,255,0.82);
+    --white-faint:rgba(255,255,255,0.55);
+    --line:rgba(255,255,255,0.14);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  html, body{
+    background:
+      radial-gradient(ellipse at 15% 0%, rgba(124,58,237,0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 85% 15%, rgba(167,139,250,0.20) 0%, transparent 45%),
+      linear-gradient(180deg, var(--purple-deep) 0%, var(--purple-mid) 45%, var(--purple-deep) 100%);
+  }
+
+  body{
+    font-family:'Hanken Grotesk', sans-serif;
+    color:var(--white-soft);
+    line-height:1.7;
+    min-height:100vh;
+  }
+
+  .wrapper{
+    max-width:860px;
+    margin:0 auto;
+    padding:80px 28px 100px;
+  }
+
+  header.hero{
+    margin-bottom:56px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--purple-soft);
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px; height:8px; border-radius:50%;
+    background:var(--purple-soft);
+    box-shadow:0 0 12px var(--purple-soft);
+    display:inline-block;
+  }
+
+  h1{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(38px, 6vw, 58px);
+    color:var(--white);
+    line-height:1.1;
+    margin-bottom:18px;
+  }
+
+  .updated{
+    font-size:15px;
+    color:var(--white-faint);
+  }
+
+  .intro-card{
+    margin-top:30px;
+    padding:22px 26px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid var(--line);
+    border-radius:16px;
+    font-size:15.5px;
+    color:var(--white-soft);
+  }
+  .intro-card strong{ color:var(--white); }
+
+  h2{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:26px;
+    color:var(--white);
+    margin-top:56px;
+    margin-bottom:18px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+  }
+
+  h3{
+    font-family:'Hanken Grotesk', sans-serif;
+    font-weight:700;
+    font-size:17px;
+    color:var(--purple-soft);
+    letter-spacing:0.3px;
+    margin-top:28px;
+    margin-bottom:10px;
+  }
+
+  p{
+    margin-bottom:14px;
+    font-size:16px;
+    color:var(--white-soft);
+  }
+
+  ul{
+    margin:0 0 16px 0;
+    padding-left:22px;
+  }
+  li{
+    margin-bottom:10px;
+    font-size:16px;
+    color:var(--white-soft);
+  }
+  li::marker{ color:var(--purple-soft); }
+
+  strong{ color:var(--white); font-weight:600; }
+
+  a{
+    color:var(--purple-soft);
+    text-decoration:underline;
+    text-decoration-color:rgba(167,139,250,0.4);
+    text-underline-offset:3px;
+  }
+  a:hover{ color:var(--white); }
+
+  .service-block{
+    background:rgba(255,255,255,0.045);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 22px;
+    margin-bottom:16px;
+  }
+  .service-block .name{
+    font-weight:700;
+    color:var(--white);
+    font-size:16px;
+    margin-bottom:6px;
+    display:block;
+  }
+  .service-block .meta{
+    font-size:14.5px;
+    color:var(--white-faint);
+    margin:2px 0;
+  }
+
+  .no-sell{
+    margin-top:18px;
+    padding:16px 20px;
+    border-left:3px solid var(--purple-soft);
+    background:rgba(124,58,237,0.12);
+    border-radius:0 10px 10px 0;
+    font-size:15.5px;
+  }
+
+  .contact-box{
+    margin-top:16px;
+    padding:24px 26px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--line);
+    border-radius:16px;
+  }
+  .contact-box p{ margin-bottom:8px; }
+  .contact-box .label{ color:var(--purple-soft); font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:1px; }
+
+  hr{
+    border:none;
+    height:1px;
+    background:var(--line);
+    margin:0;
+  }
+
+  footer{
+    margin-top:60px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    font-size:14px;
+    font-style:italic;
+    color:var(--white-faint);
+    line-height:1.6;
+  }
+
+  @media (max-width:600px){
+    .wrapper{ padding:56px 20px 80px; }
+    h2{ font-size:22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="hero">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last Updated: September 5, 2026</div>
+    <div class="intro-card">
+      <strong>Important:</strong> By using AskAstro, you agree to this Privacy Policy. We are committed to protecting your personal data and complying with the GDPR, CCPA, India's Digital Personal Data Protection Act (DPDP) 2023, and other applicable privacy laws.
+    </div>
+  </header>
+
+  <h2>1. Information We Collect</h2>
+
+  <h3>1.1 Personal Information Stored on Our Servers (Google Firestore)</h3>
+  <p>This is the only category of data that leaves your device permanently. It is used solely to create your account and generate your astrological profile:</p>
+  <ul>
+    <li><strong>Birth Details:</strong> Date, time, and place of birth (required for chart generation)</li>
+    <li><strong>Account Information:</strong> Name, sign-in identifier (e.g., Google Sign-In)</li>
+    <li><strong>Gender</strong> (if provided)</li>
+    <li><strong>Engagement Data:</strong> Login streak count tied to your account</li>
+  </ul>
+
+  <h3>1.2 Automatically Collected Information</h3>
+  <ul>
+    <li><strong>Device Information:</strong> Device model, OS version, unique device identifiers</li>
+    <li><strong>Usage &amp; Crash Data:</strong> Firebase Analytics and crash reporting, used only to fix bugs and improve the app</li>
+    <li><strong>Approximate Location:</strong> Only if used for timezone/Panchang accuracy — not stored on our servers</li>
+  </ul>
+
+  <h3>1.3 Information Stored ONLY on Your Device (Never Sent to Us)</h3>
+  <p>The following is generated and stored <strong>exclusively in local storage on your device</strong> and is never transmitted to or stored on our servers:</p>
+  <ul>
+    <li>Daily and weekly horoscope content</li>
+    <li>Panchang (Vedic almanac) data</li>
+    <li>Birth charts (D1 Lagna/Rashi and D9 Navamsha), in North Indian, South Indian, and East Indian display styles</li>
+    <li>Match-making / compatibility check results and any partner details you enter</li>
+    <li>Your conversation history with the AI Astro chatbot</li>
+    <li>Your selected language preference (English, Hindi, or Gujarati)</li>
+  </ul>
+  <p>Because this data never reaches our servers, it is permanently lost if you uninstall the App or clear its local storage — we cannot recover it.</p>
+
+  <h3>1.4 AI Chatbot Processing</h3>
+  <p>When you message AI Astro, your message text is sent in real time to our AI service provider solely to generate a reply, and is not retained by us afterward. The visible chat history is stored locally on your device as described in 1.3.</p>
+
+  <h2>2. How We Use Your Data</h2>
+  <p>Your data is used strictly for:</p>
+  <ul>
+    <li>Generating accurate Vedic astrology birth charts and predictions</li>
+    <li>Providing personalized AI-powered astrological guidance</li>
+    <li>Maintaining your login streak and account</li>
+    <li>Improving app performance and user experience</li>
+    <li>Sending service notifications and support responses</li>
+    <li>Ensuring security and preventing fraud</li>
+  </ul>
+
+  <h2>3. Third-Party Services</h2>
+  <p>We use the following trusted third-party services:</p>
+
+  <div class="service-block">
+    <span class="name">Firebase (Google)</span>
+    <div class="meta">Purpose: Authentication, Firestore database, analytics, crash reporting</div>
+    <div class="meta">Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></div>
+  </div>
+
+  <div class="service-block">
+    <span class="name">Google Gemini 3.6 Flash</span>
+    <div class="meta">Purpose: Generating AI Astro chatbot responses</div>
+    <div class="meta">Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div>
+  </div>
+
+  <div class="service-block">
+    <span class="name">Google Mobile Ads (AdMob)</span>
+    <div class="meta">Purpose: Display ads to users</div>
+    <div class="meta">Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></div>
+    <div class="meta">Opt-Out: Available in app Settings → Privacy</div>
+  </div>
+
+  <div class="no-sell">
+    <strong>We do NOT sell your personal data to any third party.</strong><br>
+    AskAstro is free to use and does not process any payments or in-app purchases.
+  </div>
+
+  <h2>4. Account and Data Deletion</h2>
+  <p>You have full control over your data.</p>
+  <p><strong>Server-stored data (Firestore):</strong> To delete your account and all associated server-stored data, use <strong>Profile → Delete Account</strong> in the App, or send an email to <a href="mailto:viralpshah98@gmail.com">viralpshah98@gmail.com</a> with:</p>
+  <ul>
+    <li>Subject: "Account Deletion Request"</li>
+    <li>Your registered email address / account identifier</li>
+    <li>Confirmation that you understand all data will be permanently deleted</li>
+  </ul>
+  <p>Processing time: within 7 business days. Data removal: permanently deleted within 30 days.</p>
+  <p><strong>Locally-stored data:</strong> Delete this at any time by clearing the App's storage/cache in your device settings, or by uninstalling the App.</p>
+
+  <h2>5. Data Security</h2>
+  <ul>
+    <li><strong>Encryption in Transit:</strong> TLS 1.3/SSL for all data transmission</li>
+    <li><strong>Encryption at Rest:</strong> AES-256 encryption for server-stored data</li>
+    <li><strong>Secure Authentication:</strong> Firebase Authentication with OAuth 2.0</li>
+    <li><strong>Access Controls:</strong> Role-based access, principle of least privilege</li>
+    <li><strong>Regular Audits:</strong> Periodic security review of our systems</li>
+  </ul>
+
+  <h2>6. Your Privacy Rights</h2>
+  <ul>
+    <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+    <li><strong>Correction:</strong> Update or correct inaccurate data</li>
+    <li><strong>Deletion:</strong> Request deletion of your account and server-stored data (Section 4)</li>
+    <li><strong>Data Portability:</strong> Receive your data in a machine-readable format</li>
+    <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications</li>
+    <li><strong>GDPR (EEA Users):</strong> Right to object, restrict processing, withdraw consent, lodge a complaint with your local supervisory authority</li>
+    <li><strong>CCPA (California Users):</strong> Right to know, right to delete, right to opt out of sale (we don't sell data)</li>
+  </ul>
+
+  <h2>7. Age Requirements</h2>
+  <ul>
+    <li><strong>Minimum Age:</strong> 13 years</li>
+    <li><strong>Ages 13–17:</strong> Require verifiable parental or guardian consent before creating an account</li>
+    <li><strong>Under 13:</strong> Not permitted to use the App under any circumstances</li>
+  </ul>
+  <p>We comply with COPPA and India's DPDP Act (which defines a "child" as anyone under 18, requiring guardian consent for that age range) by requiring parental consent for all users aged 13–17, globally. We do not knowingly collect data from children under 13. If you believe a child under 13 has provided us with data, contact us immediately at <a href="mailto:viralpshah98@gmail.com">viralpshah98@gmail.com</a>.</p>
+
+  <h2>8. Data Retention</h2>
+  <ul>
+    <li><strong>Account Data (Firestore):</strong> Until you delete your account</li>
+    <li><strong>Locally-Stored Data (charts, horoscope, chat, match-making, streak):</strong> Until you clear app storage or uninstall</li>
+    <li><strong>Usage/Crash Logs:</strong> Up to 2 years / 90 days respectively</li>
+  </ul>
+
+  <h2>9. International Data Transfers</h2>
+  <p>Your server-stored data may be processed in:</p>
+  <ul>
+    <li><strong>United States:</strong> Google Cloud Platform servers</li>
+    <li><strong>European Union:</strong> Firebase EU region (for EEA users, where configured)</li>
+    <li><strong>India:</strong> Primary operations and support</li>
+  </ul>
+  <p>We rely on Standard Contractual Clauses (SCCs) and other safeguards recognized under applicable law for international transfers.</p>
+
+  <h2>10. Sensitive Topics, Safety &amp; Content Moderation</h2>
+  <p>AskAstro is designed strictly for astrology-based guidance, entertainment, and self-reflection.</p>
+  <ul>
+    <li><strong>We do not provide, and the AI Astro chatbot will not provide, medical diagnoses, treatment recommendations, medication guidance, or dosage information</strong> — including anything framed as an astrological "remedy" or "health insight."</li>
+    <li><strong>We do not provide, and the AI Astro chatbot will not engage with, content related to self-harm, suicide, or harm to others.</strong> If your message suggests you may be at risk, the chatbot is designed to decline the request and instead point you to professional help and crisis resources (see our Terms of Service for helpline numbers).</li>
+    <li>These safeguards are best-effort and are not a substitute for professional medical or mental health care. In a genuine emergency, contact local emergency services directly — do not rely on this App.</li>
+  </ul>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Material changes will be notified via the App or your registered email, with an updated "Last Updated" date above.</p>
+
+  <h2>12. Contact Us</h2>
+  <div class="contact-box">
+    <p><span class="label">Support Email</span><br><a href="mailto:viralpshah98@gmail.com">viralpshah98@gmail.com</a></p>
+    <p><span class="label">Developer Email</span><br><a href="mailto:viralpshah98@gmail.com">viralpshah98@gmail.com</a></p>
+    <p><span class="label">Response Time</span><br>Within 7 business days</p>
+  </div>
+
+  <footer>
+    This document is a template aligned with GDPR, CCPA, India's DPDP Act 2023 &amp; Rules 2025, COPPA, and Google Play's Developer Program Policies as of 2026, following patterns used by comparable published astrology apps. It should still be reviewed by a qualified lawyer before publishing.
+  </footer>
+
+</div>
+</body>
+</html>
