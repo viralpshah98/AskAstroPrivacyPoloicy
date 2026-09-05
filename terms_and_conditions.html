@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AskAstro — Terms of Service</title>
+<meta name="description" content="Terms of Service for AskAstro, a Vedic astrology app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#221E3A;
+    --ink-soft:#5A5578;
+    --paper:#F7F5FB;
+    --panel:#FFFFFF;
+    --indigo-deep:#241F45;
+    --indigo:#34295E;
+    --gold:#B9822E;
+    --gold-soft:#F4E6C4;
+    --line:#E1DCEF;
+    --flag-bg:#FBF0D9;
+    --flag-border:#C08A34;
+    --focus:#6B5FCB;
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Inter', -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--indigo);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:2px;
+  }
+
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--indigo-deep); color:#fff; padding:10px 16px;
+    border-radius:0 0 6px 0; z-index:100;
+  }
+  .skip-link:focus{ left:0; top:0; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(255,255,255,0.05), transparent 40%),
+      linear-gradient(160deg, var(--indigo-deep), var(--indigo) 70%);
+    color:#F3F0FA;
+    padding:64px 24px 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .stars{ position:absolute; inset:0; pointer-events:none; }
+  .hero .stars circle{ fill:#F3F0FA; opacity:.35; animation:twinkle 5s ease-in-out infinite; }
+  .hero .stars circle:nth-child(2){ animation-delay:1.2s; }
+  .hero .stars circle:nth-child(3){ animation-delay:2.4s; }
+  .hero .stars circle:nth-child(4){ animation-delay:.6s; }
+  @keyframes twinkle{
+    0%, 100%{ opacity:.15; }
+    50%{ opacity:.6; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero .stars circle{ animation:none; opacity:.3; }
+    html{ scroll-behavior:auto; }
+  }
+
+  .hero-inner{ max-width:920px; margin:0 auto; position:relative; }
+  .wordmark{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--font-display); font-style:italic; font-weight:500;
+    font-size:1.15rem; color:var(--gold-soft); margin-bottom:28px;
+  }
+  .hero h1{
+    font-family:var(--font-display); font-weight:600;
+    font-size:clamp(2.2rem, 5vw, 3.1rem);
+    line-height:1.1; margin:0 0 20px; max-width:14ch;
+  }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:28px; margin-top:8px;
+    font-size:.95rem; color:#D8D2EC;
+  }
+  .hero-meta dt{ font-weight:600; color:#F3F0FA; margin-bottom:2px; }
+  .hero-meta dd{ margin:0; }
+
+  .flag{
+    display:inline-block; background:var(--gold-soft); color:#5C4413;
+    border:1px solid var(--gold); border-radius:4px;
+    padding:1px 8px; font-size:.85em; font-weight:600;
+  }
+  .hero .flag{ background:rgba(244,230,196,0.18); color:#F4E6C4; border-color:#8A6A2E; }
+
+  /* ---------- Publish checklist ---------- */
+  .publish-callout{
+    max-width:920px; margin:-32px auto 48px; padding:0 24px;
+  }
+  .publish-callout .box{
+    background:var(--flag-bg); border:1px solid var(--flag-border);
+    border-radius:10px; padding:22px 26px;
+  }
+  .publish-callout h2{
+    font-family:var(--font-display); font-size:1.15rem; margin:0 0 10px;
+    color:#5C4413;
+  }
+  .publish-callout p{ margin:0 0 12px; color:#4A3A16; }
+  .publish-callout ul{ margin:0; padding-left:1.2em; color:#4A3A16; }
+  .publish-callout li{ margin-bottom:6px; }
+  .publish-callout a{ color:#5C4413; font-weight:600; }
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:920px; margin:0 auto; padding:0 24px 80px;
+    display:grid; grid-template-columns:220px 1fr; gap:56px;
+    align-items:start;
+  }
+  aside.toc{
+    position:sticky; top:32px;
+    font-size:.92rem;
+  }
+  aside.toc h2{
+    font-size:.78rem; text-transform:none; letter-spacing:0;
+    color:var(--ink-soft); font-weight:600; margin:0 0 12px;
+  }
+  aside.toc ol{ list-style:none; margin:0; padding:0; border-left:2px solid var(--line); }
+  aside.toc li{ margin:0; }
+  aside.toc a{
+    display:block; padding:6px 0 6px 14px; margin-left:-2px;
+    border-left:2px solid transparent; color:var(--ink-soft);
+    text-decoration:none; font-size:.9rem;
+  }
+  aside.toc a:hover{ color:var(--ink); }
+  aside.toc a.active{
+    color:var(--indigo); border-left-color:var(--gold); font-weight:600;
+  }
+
+  .toc-mobile{ display:none; }
+
+  main.content{ min-width:0; max-width:680px; }
+  main.content section{ scroll-margin-top:24px; padding-bottom:40px; border-bottom:1px solid var(--line); margin-bottom:40px; }
+  main.content section:last-of-type{ border-bottom:none; }
+
+  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:16px; }
+  .section-head .num{
+    font-family:var(--font-display); font-weight:400; font-style:italic;
+    color:var(--gold); font-size:1.6rem; line-height:1; flex-shrink:0;
+  }
+  main.content h2{
+    font-family:var(--font-display); font-weight:600; font-size:1.4rem;
+    margin:0; color:var(--ink);
+  }
+  main.content h3{ font-family:var(--font-display); font-size:1.1rem; margin:24px 0 8px; }
+  main.content p{ margin:0 0 16px; color:#332D52; }
+  main.content ul{ margin:0 0 16px; padding-left:1.3em; color:#332D52; }
+  main.content li{ margin-bottom:8px; }
+  main.content strong{ color:var(--ink); }
+
+  .note-box{
+    background:var(--panel); border:1px solid var(--line); border-left:4px solid var(--indigo);
+    border-radius:6px; padding:18px 20px; margin:0 0 16px;
+  }
+  .note-box p:last-child{ margin-bottom:0; }
+
+  .help-box{
+    background:var(--panel); border:1px solid var(--gold); border-radius:8px;
+    padding:18px 22px; margin:16px 0;
+  }
+  .help-box p{ margin:0 0 10px; }
+  .help-box ul{ margin:0; }
+  .help-box li{ margin-bottom:6px; }
+
+  dl.card{
+    background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:18px 22px; margin:0 0 16px;
+  }
+  dl.card div{ display:flex; gap:10px; padding:6px 0; flex-wrap:wrap; }
+  dl.card dt{ font-weight:600; min-width:150px; color:var(--ink-soft); }
+  dl.card dd{ margin:0; color:var(--ink); }
+
+  .closing-note{
+    font-style:italic; color:var(--ink-soft); font-size:.92rem;
+    border-top:1px solid var(--line); padding-top:24px;
+  }
+
+  footer{
+    text-align:center; padding:32px 24px 48px; color:var(--ink-soft); font-size:.85rem;
+  }
+
+  @media (max-width:900px){
+    .layout{ grid-template-columns:1fr; }
+    aside.toc{ display:none; }
+    .toc-mobile{
+      display:block; margin-bottom:32px; background:var(--panel);
+      border:1px solid var(--line); border-radius:8px; padding:4px 18px;
+    }
+    .toc-mobile summary{ padding:14px 0; font-weight:600; cursor:pointer; font-family:var(--font-display); }
+    .toc-mobile ol{ list-style:none; margin:0; padding:0 0 14px; }
+    .toc-mobile a{ display:block; padding:8px 0; color:var(--indigo); text-decoration:none; border-top:1px solid var(--line); }
+    .publish-callout{ margin-top:-24px; }
+  }
+
+  @media print{
+    .hero .stars, aside.toc, .toc-mobile, .publish-callout, footer{ display:none; }
+    .hero{ background:none; color:#000; padding:24px 0; }
+    .hero .flag{ background:none; border:1px solid #000; color:#000; }
+    body{ background:#fff; }
+    .layout{ grid-template-columns:1fr; max-width:100%; }
+    main.content section{ border-bottom:none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="hero">
+  <svg class="stars" aria-hidden="true" width="100%" height="100%">
+    <circle cx="8%" cy="20%" r="2"></circle>
+    <circle cx="88%" cy="15%" r="1.6"></circle>
+    <circle cx="76%" cy="70%" r="2"></circle>
+    <circle cx="20%" cy="80%" r="1.4"></circle>
+  </svg>
+  <div class="hero-inner">
+    <div class="wordmark">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
+        <mask id="moonMask">
+          <rect width="40" height="40" fill="white"/>
+          <circle cx="25" cy="13" r="10" fill="black"/>
+        </mask>
+        <circle cx="18" cy="16" r="12" fill="#F4E6C4" mask="url(#moonMask)"/>
+        <path d="M30 25 L31.1 28.3 L34.4 29 L31.1 29.7 L30 33 L28.9 29.7 L25.6 29 L28.9 28.3 Z" fill="#F4E6C4"/>
+      </svg>
+      AskAstro
+    </div>
+    <h1>Terms of Service</h1>
+    <dl class="hero-meta">
+      <div>
+        <dt>Effective date</dt>
+        <dd>September 5, 2026</dd>
+      </div>
+      <div>
+        <dt>Last updated</dt>
+        <dd>September 5, 2026</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="toc">
+    <h2>Contents</h2>
+    <ol id="toc-list">
+      <li><a href="#eligibility">1. Eligibility</a></li>
+      <li><a href="#nature-of-service">2. Nature of the service</a></li>
+      <li><a href="#ai-disclaimer">3. AI-generated content</a></li>
+      <li><a href="#matchmaking">4. Match-making disclaimer</a></li>
+      <li><a href="#health-safety">5. Health, safety & crisis policy</a></li>
+      <li><a href="#liability">6. Limitation of liability</a></li>
+      <li><a href="#responsibilities">7. User responsibilities</a></li>
+      <li><a href="#data-storage">8. Data storage</a></li>
+      <li><a href="#languages">9. Language availability</a></li>
+      <li><a href="#ip">10. Intellectual property</a></li>
+      <li><a href="#termination">11. Termination</a></li>
+      <li><a href="#changes">12. Changes to these terms</a></li>
+      <li><a href="#indemnity">13. Indemnity</a></li>
+      <li><a href="#grievance">14. Grievance officer</a></li>
+      <li><a href="#governing-law">15. Governing law</a></li>
+      <li><a href="#contact">16. Contact us</a></li>
+    </ol>
+  </aside>
+
+  <main class="content" id="main">
+    <details class="toc-mobile">
+      <summary>Contents</summary>
+      <ol>
+        <li><a href="#eligibility">1. Eligibility</a></li>
+        <li><a href="#nature-of-service">2. Nature of the service</a></li>
+        <li><a href="#ai-disclaimer">3. AI-generated content</a></li>
+        <li><a href="#matchmaking">4. Match-making disclaimer</a></li>
+        <li><a href="#health-safety">5. Health, safety & crisis policy</a></li>
+        <li><a href="#liability">6. Limitation of liability</a></li>
+        <li><a href="#responsibilities">7. User responsibilities</a></li>
+        <li><a href="#data-storage">8. Data storage</a></li>
+        <li><a href="#languages">9. Language availability</a></li>
+        <li><a href="#ip">10. Intellectual property</a></li>
+        <li><a href="#termination">11. Termination</a></li>
+        <li><a href="#changes">12. Changes to these terms</a></li>
+        <li><a href="#indemnity">13. Indemnity</a></li>
+        <li><a href="#grievance">14. Grievance officer</a></li>
+        <li><a href="#governing-law">15. Governing law</a></li>
+        <li><a href="#contact">16. Contact us</a></li>
+      </ol>
+    </details>
+
+    <p>Please read these Terms of Service ("Terms") carefully before using AskAstro ("the App"). By downloading, accessing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+
+    <section id="eligibility">
+      <div class="section-head"><span class="num">01</span><h2>Eligibility</h2></div>
+      <p>AskAstro is intended for use by individuals <strong>aged 13 and older</strong>. By using the App, you confirm that you are at least 13 years old. If you are between 13 and the age of legal majority in your jurisdiction, you confirm that you have your parent's or legal guardian's permission to use the App. We do not knowingly permit use by children under 13.</p>
+    </section>
+
+    <section id="nature-of-service">
+      <div class="section-head"><span class="num">02</span><h2>Nature of the service — advisory & entertainment only</h2></div>
+      <p>AskAstro provides Vedic astrology-based content and tools, including:</p>
+      <ul>
+        <li>Daily and weekly horoscopes</li>
+        <li>Panchang (Vedic almanac) information</li>
+        <li>Login streaks and engagement features</li>
+        <li>An AI-powered chatbot ("AI Astro") for astrology-related conversations</li>
+        <li>Match-making and compatibility checks between individuals</li>
+        <li>Birth chart (Kundali) generation, including D1 (Lagna/Rashi) and D9 (Navamsha) charts, displayed in North Indian, South Indian, and East Indian formats</li>
+      </ul>
+      <p><strong>All content, predictions, compatibility scores, and chatbot responses provided by AskAstro are for informational, advisory, and entertainment purposes only.</strong> Astrology is a traditional belief system and is not a scientifically validated method of prediction or advice. Nothing in the App constitutes professional, medical, legal, financial, psychological, or relationship advice.</p>
+    </section>
+
+    <section id="ai-disclaimer">
+      <div class="section-head"><span class="num">03</span><h2>AI-generated content — important disclaimer</h2></div>
+      <p>The AI Astro chatbot and other AI-assisted features in this App use artificial intelligence to generate responses. You acknowledge and agree that:</p>
+      <ul>
+        <li>AI-generated responses <strong>can be inaccurate, incomplete, outdated, or simply wrong</strong>.</li>
+        <li>The AI does not have real-time knowledge of your personal circumstances beyond what you explicitly share, and it may misunderstand context.</li>
+        <li><strong>You should not blindly trust or act upon any output from the AI chatbot or any other feature of this App.</strong></li>
+        <li>You are solely responsible for independently verifying any information before making decisions based on it, and for seeking guidance from qualified professionals (financial advisors, medical practitioners, legal counsel, therapists, etc.) for any significant life decision.</li>
+      </ul>
+    </section>
+
+    <section id="matchmaking">
+      <div class="section-head"><span class="num">04</span><h2>Match-making and compatibility disclaimer</h2></div>
+      <p>Compatibility scores, Guna Milan results, and any relationship-related content generated by the App are based on traditional astrological methods and/or AI-generated analysis. They are <strong>not a guarantee, prediction, or endorsement</strong> of any relationship's success or failure, and should not be the sole basis for personal, marital, or relationship decisions.</p>
+    </section>
+
+    <section id="health-safety">
+      <div class="section-head"><span class="num">05</span><h2>Health, safety & crisis content policy</h2></div>
+      <p><strong>AskAstro is not a medical, mental health, or emergency service.</strong></p>
+      <ul>
+        <li>The App, including the AI Astro chatbot, <strong>does not provide medical diagnoses, treatment recommendations, medication guidance, or dosage information of any kind</strong> — including anything framed as an astrological "remedy," "health insight," or similar. Always consult a licensed physician or healthcare provider for medical concerns.</li>
+        <li>The App, including the AI Astro chatbot, <strong>will not provide content related to suicide, self-harm, or harm to others.</strong> If your message suggests you may be in crisis, the chatbot is designed to decline the underlying request and instead point you toward professional help and crisis resources.</li>
+      </ul>
+      <div class="help-box">
+        <p><strong>Crisis resources</strong></p>
+        <ul>
+          <li><strong>India:</strong> iCall (+91 9152987821), AASRA (+91 9820466726), Vandrevala Foundation Helpline (1860 2662 345)</li>
+          <li><strong>United States:</strong> 988 Suicide & Crisis Lifeline (call or text 988)</li>
+          <li>Or your local emergency services number</li>
+        </ul>
+      </div>
+      <p><strong>If you are in immediate danger or experiencing a medical or mental health emergency, do not use this App — contact local emergency services or a crisis helpline immediately.</strong></p>
+      <p>These safeguards are provided on a best-effort basis and are not guaranteed to catch every instance of concerning content. They do not make the App a substitute for professional care.</p>
+    </section>
+
+    <section id="liability">
+      <div class="section-head"><span class="num">06</span><h2>No liability — limitation of liability</h2></div>
+      <p><strong>To the maximum extent permitted by applicable law:</strong></p>
+      <ul>
+        <li>AskAstro and its developer(s)/owner(s) (collectively, "we", "us") make no warranties, express or implied, regarding the accuracy, reliability, completeness, or suitability of any content, prediction, chart, or chatbot response provided through the App.</li>
+        <li>The App is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis, without warranties of any kind.</li>
+        <li><strong>We are not responsible or liable for any actions taken by you, any outcomes, losses, damages, injuries, or consequences (financial, emotional, physical, relational, or otherwise) arising from your use of, reliance on, or decisions made based on any content, advice, chart, prediction, match-making result, or chatbot response provided by the App.</strong></li>
+        <li>You use the App entirely at your own risk and discretion.</li>
+        <li>We are not responsible for any actions, conduct, or content generated or shared by users of the App, including in any social/sharing features.</li>
+      </ul>
+    </section>
+
+    <section id="responsibilities">
+      <div class="section-head"><span class="num">07</span><h2>User responsibilities</h2></div>
+      <p>You agree to:</p>
+      <ul>
+        <li>Provide accurate information (e.g., birth date, time, and place) for chart generation purposes</li>
+        <li>Use the App only for lawful, personal, non-commercial purposes</li>
+        <li>Not misuse the AI Astro chatbot to generate harmful, abusive, or illegal content</li>
+        <li>Not rely on the App as a substitute for professional advice in medical, legal, financial, or psychological matters</li>
+      </ul>
+    </section>
+
+    <section id="data-storage">
+      <div class="section-head"><span class="num">08</span><h2>Data storage</h2></div>
+      <p>Please refer to our Privacy Policy for details on how your data is handled. In summary: limited account information is stored securely via Google Firestore, while all other app-generated content (charts, horoscopes, Panchang, match-making results, chat history, and streak data) is stored locally on your device only.</p>
+    </section>
+
+    <section id="languages">
+      <div class="section-head"><span class="num">09</span><h2>Language availability</h2></div>
+      <p>AskAstro is available in <strong>English, Hindi, and Gujarati</strong>. While we strive for accuracy across all supported languages, we do not guarantee that translations are free from errors.</p>
+    </section>
+
+    <section id="ip">
+      <div class="section-head"><span class="num">10</span><h2>Intellectual property</h2></div>
+      <p>All content, design, branding, and technology within the App (excluding user-provided input and third-party AI outputs) are the property of AskAstro and its developer(s). You may not copy, modify, reverse-engineer, or redistribute any part of the App without prior written permission.</p>
+    </section>
+
+    <section id="termination">
+      <div class="section-head"><span class="num">11</span><h2>Termination</h2></div>
+      <p>We reserve the right to suspend or terminate your access to the App at our discretion, including for violation of these Terms, misuse of features, or fraudulent activity.</p>
+    </section>
+
+    <section id="changes">
+      <div class="section-head"><span class="num">12</span><h2>Changes to these terms</h2></div>
+      <p>We may update these Terms from time to time. Continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
+    </section>
+
+    <section id="indemnity">
+      <div class="section-head"><span class="num">13</span><h2>Indemnity</h2></div>
+      <p>You agree to indemnify and hold harmless AskAstro, its developer(s), officers, and affiliates from and against any claims, losses, damages, liabilities, and expenses (including reasonable legal fees) arising out of or related to your use of the App, your violation of these Terms, or your violation of any applicable law or third-party right.</p>
+    </section>
+
+    <section id="grievance">
+      <div class="section-head"><span class="num">14</span><h2>Grievance officer</h2></div>
+      <p>In accordance with the Information Technology Act, 2000, the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the DPDP Rules, 2025 (India), grievances will be handled as follows:</p>
+      <dl class="card">
+        <div><dt>Response timeline</dt><dd>Acknowledged and addressed within 90 days</dd></div>
+      </dl>
+    </section>
+
+    <section id="governing-law">
+      <div class="section-head"><span class="num">15</span><h2>Governing law</h2></div>
+      <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law principles.</p>
+    </section>
+
+    <section id="contact">
+      <div class="section-head"><span class="num">16</span><h2>Contact us</h2></div>
+      <p>For questions about these Terms, please contact us at:</p>
+      <dl class="card">
+        <div><dt>Email</dt><dd>viralpshah98@gmail.com</dd></div>
+        <div><dt>Developer/Company name</dt><dd>Viral Shah</dd></div>
+      </dl>
+    </section>
+
+    <p class="closing-note">This document is a comprehensive template aligned with India's DPDP Act 2023 & Rules 2025, IT Act/IT Rules 2021, U.S. COPPA/state privacy laws, and Google Play's Developer Program Policies as of 2026, and follows patterns used by comparable published astrology apps. It should still be reviewed by a qualified lawyer before publishing — in particular, India's IT Rules, 2021 require a named Grievance Officer with published contact details, which this version does not yet include.</p>
+  </main>
+</div>
+
+<footer>AskAstro — Terms of Service template</footer>
+
+<script>
+  // Highlight the current section in the sidebar TOC as the user scrolls.
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-list a'));
+    var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+    if(!('IntersectionObserver' in window)) return;
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = '#' + entry.target.id;
+        var link = links.find(function(a){ return a.getAttribute('href') === id; });
+        if(!link) return;
+        if(entry.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    sections.forEach(function(s){ if(s) observer.observe(s); });
+  })();
+</script>
+</body>
+</html>
